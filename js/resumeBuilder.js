@@ -1,7 +1,9 @@
 /*
 This is empty on purpose! Your code to build the resume will go here.
  */
-var bios = {
+
+ //bio object
+var bio = {
 	"name": "Evan Fung",
 	"role": "Web Developer",
 	"contacts": {
@@ -17,44 +19,76 @@ var bios = {
 	],
 	"bioPic": "images/fry.jpg"
 };
-var formattedName = HTMLheaderName.replace("%data%",bios.name);
-var formattedRole = HTMLheaderRole.replace("%data%",bios.role);
-var formattedPic = HTMLbioPic.replace("%data%",bios.bioPic);
-var formattedWelMes = HTMLwelcomeMsg.replace("%data%",bios.welcomeMessage);
 
-$("#header").append(formattedName);
-$("#header").append(formattedRole);
-for(var property in bios.contacts) {
-	if(bios.contacts.hasOwnProperty(property)) {
-		$("#header").append($("#topContacts").append(HTMLcontactGeneric.replace("%contact%",property).replace("%data%",bios.contacts[property])));
-	}
-}
-$("#header").append(formattedPic);
-$("#header").append(formattedWelMes);
-$("#header").append(HTMLskillsStart);
 
-bios.skills.forEach(function(skill) {
-	$("#skills").append(HTMLskills.replace("%data%",skill));	
-});
+//education object
+var education = {
+	"schools": [
+		{
+			"name": "IVE",
+			"location": "Hong Kong",
+			"degree": "software engineering",
+			"majors": [
+				"software engineering",
+				"english"
+			],
+			"dates":"2015 - 2017",
+			"url": "https://github.com/EvanFung/frontend-nanodegree-resume"
+		},
+		{
+			"name": "HKU",
+			"location": "Hong Kong",
+			"degree": "computer science",
+			"majors": [
+				"computer science",
+				"english"
+			],
+			"dates":"2017 - 2019",
+			"url": "https://github.com/EvanFung/frontend-nanodegree-resume"
+		}
+	],
+	"onlineCourses": [
+		{
+			"title": "udacity front end web developer nanodegree",
+			"school": "Udacity",
+			"dates": "2017 - 2018",
+			"url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+		}
+	]
+	// display function added later since functions shouldn't be part of pure JSON
+};
+
 
 //work object
-var work = {};
-work.position = 'Hong Kong Science Park';
-work.employer = 'Cenique';
-work.years = 0;
-work.city = 'Hong Kong';
+var work = {
+	"jobs": [
+		{
+			"employer": "cenique",
+			"title": "software engineer",
+			"location": "Hong Kong Science Park",
+			"dates": "in progress",
+			"description": "Programmer"
+		}
+	]
+	// display function added later since functions shouldn't be part of pure JSON
+};
 
-$("#main").append(work.position);
-$("#main").append(work.employer);
-$("#main").append(work.years);
-$("#main").append(work.city);
 
-//education
-var education = {};
-education["name"] = "IVE";
-education["years"] = 2;
-education["city"] = "Hong Kong";
-
-$("#main").append(education["name"]);
-$("#main").append(education["years"]);
-$("#main").append(education["city"]);
+//projects object
+var projects = {
+	"projects": [
+		{
+			"title": "This is just a dummy",
+			"dates" : "10.09.2017 - now",
+			"description" : "too lazy to write something here",
+			"images" : ["images/197x148.gif", "images/197x148.gif", "images/197x148.gif"]
+		},
+		{
+            "title" : "Code Ninja rocking around xD",
+            "dates" : "21.07.2015",
+            "description" : "from androidify.com",
+            "images" : ["images/197x148.gif"]			
+		}
+	]
+	// display function added later since functions shouldn't be part of pure JSON
+};
