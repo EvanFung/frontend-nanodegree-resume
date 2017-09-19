@@ -1,6 +1,49 @@
 /*
 This is empty on purpose! Your code to build the resume will go here.
  */
+//  var awesomeThoughts = "I am evan and I am AWESOME!";
+//  console.log(awesomeThoughts);
+
+//  var funThoughts = awesomeThoughts.replace("AWESOME","FUN");
+// $('#main').append(funThoughts);
+
+// var formattedName = HTMLheaderName.replace("%data%","Evan");
+// var formattedRole = HTMLheaderRole.replace("%data%","Web Developer");
+// $("#header").prepend(formattedRole);
+// $("#header").prepend(formattedName);
+
+// var str = "audacity";
+// var udacity = capitalizeFirstLetter(str.slice(1));
+// console.log(udacity);
+
+// function capitalizeFirstLetter(str) {
+// 	return str.charAt(0).toUpperCase() + str.slice(1);
+// }
+
+// var name = "AlbERt EINstEiN";
+
+// function nameChanger(oldName) {
+//     var finalName = oldName;
+//     // Your code goes here!
+//     //Cameron PITTMAN
+//     var arr = name.split(" ",2);
+//     var firstName = arr[0];
+//     var surName = arr[1];
+//     firstName = firstName.charAt(0).toUpperCase() + firstName.slice(1).toLowerCase();
+//     surName = surName.toUpperCase();
+    
+//     arr[0] = firstName;
+//     arr[1] = surName;
+//     finalName = arr.join(" ");
+//     return finalName;
+// };
+
+// console.log(nameChanger(name));
+
+
+/*
+This is empty on purpose! Your code to build the resume will go here.
+ */
 var bios = {
 	"name": "Evan Fung",
 	"role": "Web Developer",
