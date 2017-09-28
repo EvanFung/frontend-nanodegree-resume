@@ -16,7 +16,7 @@ var bio = {
     "skills": [
         "HTML", "CSS", "JavaScript", "Java", "Node.js", "Project Management"
     ],
-    "bioPic": "images/fry.jpg"
+    "bioPic": "images/cheung.jpg"
 };
 
 bio.display = function() {
@@ -157,25 +157,25 @@ work.display = function () {
 //projects object
 var projects = {
     "projects": [{
-            "title": "This is just a dummy",
-            "dates": "10.09.2017 - now",
+            "title": "ReactWeather App",
+            "dates": "10.09.2017",
             "description": "too lazy to write something here",
-            "url": "https://github.com/EvanFung/frontend-nanodegree-resume",
-            "images": ["images/197x148.gif", "images/197x148.gif", "images/197x148.gif"]
+            "url": "https://github.com/EvanFung/ReactWeather",
+            "images": ["images/rsz_1react-weather.png"]
         },
         {
-            "title": "Code Ninja rocking around xD",
+            "title": "Chat App",
             "dates": "21.07.2015",
-            "description": "from androidify.com",
-            "url": "https://github.com/EvanFung/frontend-nanodegree-resume",
-            "images": ["images/197x148.gif"]
+            "description": "Simple chat application with using socket.io and node.js",
+            "url": "https://github.com/EvanFung/chat-app-nodejs",
+            "images": ["images/rsz_chatapp.png"]
         },
         {
             "title": "Freelance Matching System",
             "dates": "30.05.2017",
-            "description": "An easier way to find a job or find a freelancer",
+            "description": "Nowadays, many of Hong Kong base freelancing company require the freelancer submit their project firstly, and then the job provider select the desire candidate. This kind of pattern is not good for freelancer, what if the freelancer did not select, and he will lose all his effort. Furthermore, many of freelance platforms in Hong Kong are not user friendly and the user interface is terrible, the profit model of the company is not enough explicit. While, the Government Labor Department has job finding – websites, those website does not provide the job matching service. As the creative industry in Hong Kong is lack of a proper freelance job matching platform.",
             "url": "https://github.com/EvanFung/Freelance-Matching-System-Client-Side",
-            "images": ["images/197x148.gif"]
+            "images": ["images/rsz_home.png","images/rsz_browserjob.png"]
         }
     ]
     // display function added later since functions shouldn't be part of pure JSON
