@@ -101,3 +101,67 @@ education["city"] = "Hong Kong";
 $("#main").append(education["name"]);
 $("#main").append(education["years"]);
 $("#main").append(education["city"]);
+
+//answer - control flow 1
+
+// var formattedName = HTMLheaderName.replace("%data%",bio.name);
+// $("#header").append(formattedName);
+// if(bio.skills.length > 0) {
+// 	$("#header").append(HTMLskillsStart);
+// 	bio.skills.forEach(function(skill) {
+// 	$("#skills").append(HTMLskills.replace("%data%",skill));	
+// 	});
+// }
+
+
+//answer - control flow 2
+// for(job in work.jobs) {
+// 	$("#workExperience").append(HTMLworkStart);
+// 	var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
+// 	var formattedTitle = HTMLworkTitle.replace("%data%",work.jobs[job].title);
+// 	var formattedEmployerTitle = formattedEmployer + formattedTitle;
+// 	$(".work-entry:last").append(formattedEmployerTitle);
+// }
+
+
+//answer - function 
+function displayWork() {
+	for(job in work.jobs) {
+		$("#workExperience").append(HTMLworkStart);
+		var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
+		var formattedTitle = HTMLworkTitle.replace("%data%",work.jobs[job].title);
+		var formattedLocation = HTMLworkLocation.replace("%data%",work.jobs[job].location);
+		var formattedDescription = HTMLworkDescription.replace("%data%",work.jobs[job].description);
+		var formattedDate = HTMLworkDates.replace("%data%",work.jobs[job].dates);
+		var formattedEmployerTitle = formattedEmployer + formattedTitle;
+		$(".work-entry:last").append(formattedEmployerTitle);
+		$(".work-entry:last").append(formattedDate);
+		$(".work-entry:last").append(formattedDescription);
+	}
+}
+
+// displayWork();
+
+// function locationizer(work_obj) {
+// 	var locations = [];
+
+// 	for(work of work_obj.jobs) {
+// 		locations.push(work.location);
+// 	}
+
+// 	return locations;
+// }
+
+
+// function inName(name) {
+// 	name = name.trim().split(" ");
+// 	console.log(name);
+// 	name[1] = name[1].toUpperCase();
+// 	name[0] = name[0].slice(0,1).toUpperCase() +
+// 	name[0].slice(1).toLowerCase();
+// 	return name[0] + " " + name[1];
+// }
+
+// var name = inName("Evan Fung");
+// console.log(name);
+// $("#main").append(internationalizeButton);
