@@ -90,6 +90,10 @@ a {
     display: block;
 }
 
+#header a {
+  display: inline-block;
+}
+
 .welcome-message {
     font-style: italic;
     font-size: 18px;
