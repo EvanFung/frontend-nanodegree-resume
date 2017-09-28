@@ -95,6 +95,7 @@ education.display = function() {
 		}
 
 		$(".education-entry:last").append(formattedName,formattedDegree,formattedDate,formattedLocation,majorStr);
+		$(".education-entry:last a").attr("href",school.url).attr("target","_blank");
 	}
 
 	$("#education").append(HTMLonlineClasses);
@@ -102,13 +103,15 @@ education.display = function() {
 	for(course of education.onlineCourses) {
 		$("#education").append(HTMLschoolStart);
 
-		var formattedTitle = HTMLonlineTitle.replace("%data%",course.title);
+		var formattedTitle = HTMLonlineTitle.replace("%data%",course.title).replace("#",course.url);
 		var formattedOnlineSchool = HTMLonlineSchool.replace("%data%",course.school);
 		var formattedDates = HTMLonlineDates.replace("%data%",course.dates);
-		var formattedURL = HTMLonlineURL.replace("%data%",course.url);
+		var formattedURL = HTMLonlineURL.replace("%data%",course.url).replace("#",course.url);
 
 		var formattedTitleSchool = formattedTitle + formattedOnlineSchool;
+
 		$(".education-entry:last").append(formattedTitleSchool,formattedDates,formattedURL);
+
 
 	}	
 }
